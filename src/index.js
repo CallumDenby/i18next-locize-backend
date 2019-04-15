@@ -59,7 +59,7 @@ class I18NextLocizeBackend {
 
     if (this.options.pull) console.warn('deprecated: pull will be removed in future versions and should be replaced with locize private versions')
 
-    const hostname = window.location && window.location.hostname;
+    const hostname = window && window.location && window.location.hostname;
     if (hostname) {
       this.isAddOrUpdateAllowed = this.options.allowedAddOrUpdateHosts.indexOf(hostname) > -1;
     } else {
